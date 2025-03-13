@@ -1,5 +1,19 @@
 
-h1 {
-    font-size:50px;
-    text-align:center;
+
+@font-face {
+    font-family:"sacco";
+    src:url("fonts/sacco/truetype/Sacco-SemiBoldCondensed.ttf");
+}
+
+.first-page {
+    max-width: 100%;
+    max-height: 100%;
+    background-image:url("images/main_img_blur.png");
+}
+
+.main-header {
+    font-family:"sacco";
+    font-size: 450%;
+    margin-top:30%;
+    margin-left:10%;
 }
