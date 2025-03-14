@@ -1,5 +1,3 @@
-
-
 @font-face {
     font-family:"sacco";
     src:url("fonts/sacco/truetype/Sacco-SemiBoldCondensed.ttf");
@@ -41,5 +39,11 @@ body {
     background-color: black;
 }
 .second-page-text {
+    font-style:light;
+}
+
+.test-section {
+    color: white;
+    font-family:"oswald";
     font-style:light;
 }
