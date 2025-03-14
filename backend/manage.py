@@ -8,7 +8,7 @@ app = Flask(__name__, static_folder="static", template_folder="templates")
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="password",
+    password="4619",
     database="test_results"
 )
 cursor = conn.cursor()
