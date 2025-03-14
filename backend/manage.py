@@ -16,7 +16,13 @@ cursor = conn.cursor()
 # Правильные ответы
 correct_answers = {
     "q1": "b",
-    "q2": "a"
+    "q2": "a",
+    "q3": "b",
+    "q4": "a",
+    "q5": "b",
+    "q6": "c",
+    "q7": "b",
+    "q8": "b"
 }
 
 @app.route("/", methods=["GET"])
