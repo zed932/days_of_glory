@@ -14,6 +14,9 @@
 }
 body {
     background-color:black;
+    color: white;
+    font-family:"oswald";
+    font-style:light;
 }
 .main-header {
     font-family:"sacco";
@@ -21,7 +24,11 @@ body {
     margin-top:30%;
     margin-left:10%;
 }
-
+.main-img {
+    text-align:center;
+    max-width: 90%;
+    max-height: 40%;
+}
 .first-page {
     max-width: 100%;
     max-height: 100%;
@@ -29,21 +36,26 @@ body {
     background-image:url("images/main_img_blur.png");
 }
 
-.second-page {
+.description-page {
     display:flex;
     font-size: 140%;
-    color: white;
-    font-family:"oswald";
     margin-left: 10%;
     margin-right: 20%;
     background-color: black;
-}
-.second-page-text {
     font-style:light;
 }
 
+.January-27 {
+    background-image:url("images/map27.png");
+    max-width: 90%;
+}
+
 .test-section {
-    color: white;
-    font-family:"oswald";
     font-style:light;
 }
+
+.day-description {
+    font-style:light;
+    font-size: 90%;
+}
+
