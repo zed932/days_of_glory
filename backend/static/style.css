@@ -99,37 +99,27 @@ body {
     background-size: cover;
 }
 
-.main-map {
-    position: relative;
-    width: 90%;
-    max-width: 1000px; /* Чтобы карта не была слишком огромной */
-}
-
-/* Карта */
-.main-map img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Маркеры */
 .marker {
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     background-color: rgb(233, 170, 42);
     border-radius: 50%;
     cursor: pointer;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
 }
 
-/* Привязываем маркеры к изображению карты */
 .marker1 { top: 30%; left: 40%; }
 .marker2 { top: 50%; left: 60%; }
 .marker3 { top: 52%; left: 16%; }
-.marker4 { top: 40%; left: 50%; }
-.marker5 { top: 45%; left: 30%; }
+.marker4 { top: 30%; left: 40%; }
+.marker5 { top: 50%; left: 60%; }
 .marker6 { top: 79%; left: 79%; }
-.marker7 { top: 20%; left: 45%; }
-.marker8 { top: 55%; left: 65%; }
+.marker7 { top: 30%; left: 40%; }
+.marker8 { top: 50%; left: 60%; }
 .marker9 { top: 70%; left: 20%; }
+
+.main-map {
+    position: relative;
+    overflow: hidden;
+}
