@@ -56,7 +56,7 @@ body {
     color: white;
     z-index: 2; 
 }
-.start-pages {
+.pages {
     height: 100vh; 
     overflow-y: scroll; 
     scroll-snap-type: y mandatory; 
@@ -79,17 +79,57 @@ body {
     font-style:light;
 }
 
-.January-27 {
-    background-image:url("images/map27.png");
-    max-width: 90%;
-}
-
 .test-section {
     font-style:light;
 }
 
 .day-description {
     font-style:light;
-    font-size: 90%;
+    font-size: 110%;
+    line-height: 2;
+    margin:7%;
 }
 
+.day-section {
+    margin: 5%;
+}
+
+.day-background {
+    background-image: url("/static/images/main_map_blur.png");
+    background-size: cover;
+}
+
+.main-map {
+    position: relative;
+    width: 90%;
+    max-width: 1000px; /* Чтобы карта не была слишком огромной */
+}
+
+/* Карта */
+.main-map img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Маркеры */
+.marker {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(233, 170, 42);
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+/* Привязываем маркеры к изображению карты */
+.marker1 { top: 30%; left: 40%; }
+.marker2 { top: 50%; left: 60%; }
+.marker3 { top: 52%; left: 16%; }
+.marker4 { top: 40%; left: 50%; }
+.marker5 { top: 45%; left: 30%; }
+.marker6 { top: 79%; left: 79%; }
+.marker7 { top: 20%; left: 45%; }
+.marker8 { top: 55%; left: 65%; }
+.marker9 { top: 70%; left: 20%; }
