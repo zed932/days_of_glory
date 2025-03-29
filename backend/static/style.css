@@ -1,0 +1,156 @@
+@font-face {
+    font-family:"sacco";
+    src:url("fonts/sacco/truetype/Sacco-SemiBoldCondensed.ttf");
+}
+
+@font-face {
+    font-family:"oswald";
+    src:url("fonts/Oswald/Oswald-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family:"oswald";
+    src:url("fonts/Oswald/static/Oswald-Light.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color:black;
+    color: white;
+    font-family:"oswald";
+    font-style:light;
+}
+.first-page {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    overflow: hidden; 
+}
+
+.main-img-blur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    filter: blur(10px); 
+    z-index: -1; 
+}
+
+.main-img {
+    max-width: 90%;
+    max-height: 40%;
+    position: relative; 
+    z-index: 1;
+}
+
+.main-header {
+    font-family: "sacco";
+    font-size: 450%;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: white;
+    z-index: 2; 
+}
+.pages {
+    height: 100vh; 
+    overflow-y: scroll; 
+    scroll-snap-type: y mandatory; 
+}
+
+.section {
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start; 
+}   
+
+.description-page {
+    display:flex;
+    font-size: 140%;
+    margin-left: 10%;
+    margin-right: 20%;
+    background-color: black;
+    font-style:light;
+}
+
+.test-section {
+    font-style:light;
+    display: flex;
+    justify-content: left;
+}
+
+.day-description {
+    font-style:light;
+    font-size: 110%;
+    line-height: 2;
+    margin:7%;
+}
+
+.day-section {
+    margin: 5%;
+}
+
+.day-background {
+    background-image: url("/static/images/main_map_blur.png");
+    background-size: cover;
+}
+
+.marker {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(233, 170, 42);
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%); 
+}
+
+.marker1 { top: 30%; left: 40%; }
+.marker2 { top: 50%; left: 60%; }
+.marker3 { top: 52%; left: 16%; }
+.marker4 { top: 30%; left: 40%; }
+.marker5 { top: 50%; left: 60%; }
+.marker6 { top: 79%; left: 79%; }
+.marker7 { top: 30%; left: 40%; }
+.marker8 { top: 50%; left: 60%; }
+.marker9 { top: 70%; left: 20%; }
+
+.main-map {
+    position: relative;
+}
+
+.main-map img {
+    height: auto;
+    display: block;
+}
+.day-buttons {
+    display: flex;
+    gap: 15px; /* Расстояние между кнопками */
+    margin-top: 20px;
+}
+
+.day-button {
+    padding: 12px 24px;
+    background-color: #777; /* Серый цвет */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.day-button:hover {
+    background-color: #555; /* Темнее при наведении */
+}
