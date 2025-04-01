@@ -102,7 +102,7 @@ body {
 }
 
 .day-background {
-    background-image: url("/static/images/main_map_blur.png");
+    background-image: url("images/main_map_blur.png");
     background-size: cover;
 }
 
