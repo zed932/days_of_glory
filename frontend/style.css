@@ -85,9 +85,16 @@ body {
 }
 
 .test-section {
-    font-style:light;
+    min-height: 100vh; 
     display: flex;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start; 
+    flex-direction: column; /* Добавлено для вертикального выравнивания */
+}
+
+.test-header {
+    text-align: center; /* Центрирование заголовка */
 }
 
 .day-description {
@@ -153,4 +160,104 @@ body {
 
 .day-button:hover {
     background-color: #555; /* Темнее при наведении */
+}
+
+.test-header {
+    text-align: center;
+    
+}
+
+/* ===== МОБИЛЬНЫЕ СТИЛИ (максимальная ширина 768px) ===== */
+@media only screen and (max-width: 768px) {
+    .main-header {
+        font-size: 2.5rem;
+        left: 5%;
+        bottom: 20%;
+        text-align: center;
+        width: 90%;
+    }
+
+    .main-img {
+        max-height: 30vh;
+        margin-top: 20%;
+    }
+
+    .description-page {
+        font-size: 1rem;
+        margin-left: 5%;
+        margin-right: 5%;
+        flex-direction: column;
+    }
+
+    .test-section {
+        padding: 0 5%;
+    }
+
+    /* Изменения для Day section */
+    .day-section {
+        margin: 5% 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .day-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin: 5% 0;
+        order: 2; /* Текст после картинки */
+    }
+
+    .main-map {
+        order: 1; /* Картинка перед текстом */
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .day-buttons {
+        order: 3; /* Кнопки после текста */
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .day-button {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .marker {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Адаптивные позиции маркеров */
+    .marker1 { top: 25%; left: 35%; }
+    .marker2 { top: 45%; left: 55%; }
+    .marker3 { top: 47%; left: 11%; }
+    .marker4 { top: 25%; left: 35%; }
+    .marker5 { top: 45%; left: 55%; }
+    .marker6 { top: 74%; left: 74%; }
+    .marker7 { top: 25%; left: 35%; }
+    .marker8 { top: 45%; left: 55%; }
+    .marker9 { top: 65%; left: 15%; }
+
+    /* Дополнительные мобильные стили */
+    .pages {
+        scroll-snap-type: none;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .section {
+        min-height: auto;
+        padding: 50px 0;
+        scroll-snap-align: none;
+    }
+
+    .first-page {
+        min-height: 100vh;
+        padding-bottom: 50px;
+    }
 }
