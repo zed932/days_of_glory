@@ -8,9 +8,21 @@
 </head>
 <body>
 
+    <!-- Навигационное меню -->
+    <header class="header-nav">
+        <nav class="navigation">
+            <ul class="nav-list">
+                <li><a href="#start" class="nav-link">В начало</a></li>
+                <li><a href="#map" class="nav-link">Карта</a></li>
+                <li><a href="testinvite.html" class="nav-link">Пройти тест</a></li>
+                <li><a href="leaderboard.html" class="nav-link">Лидерборд</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="pages">
     <!-- Стартовая страница  -->
-    <div class="first-page section">
+    <div class="first-page section" id="start">
         <img src="images/main_img_blur.png" class="main-img-blur"> <!-- Размытое изображение -->
         <img src="images/main_img.png" class="main-img"> <!-- Основное изображение -->
         <h1 class="main-header">дни воинской славы</h1>
@@ -35,6 +47,7 @@
     
 
     <div class="main-map section" id="map">
+        <h2 class="map-header">Интерактивная карта</h2>
         <img src="images/main_map.png" width="90%" height="60%">
         <a href="#1" class="marker marker1"></a>
         <a href="#2" class="marker marker2"></a>
@@ -234,81 +247,6 @@
                 <a href="#map" class="day-button">Вернуться к карте</a>
             </div>
         </div>
-    </div>
-
-  
-
-
-    <!-- Тест -->
-    <div class="test-section section" id="test">
-        <h2 class="test-header">Пройдите тест</h2>
-        <form id="quiz-form" action="/backend/submit.php" method="post">
-            <label for="fio">Введите ФИО:</label>
-            <input type="text" id="fio" name="fio" required><br>
-                
-            <label for="group">Введите группу:</label>
-            <input type="text" id="group" name="group" required><br>
-
-            <ol>
-                <li>
-                    <p>Какое событие произошло 27 января 1944 года?</p>
-                    <label><input type="radio" name="q1" value="a"> a) Разгром немецко-фашистских войск в битве за Кавказ</label><br>
-                    <label><input type="radio" name="q1" value="b"> b) Освобождение Ленинграда от блокады</label><br>
-                    <label><input type="radio" name="q1" value="c"> c) Начало Сталинградской битвы</label><br>
-                    <label><input type="radio" name="q1" value="d"> d) Контрнаступление под Москвой</label>
-                </li>
-                <li>
-                    <p>Когда завершилась Сталинградская битва?</p>
-                    <label><input type="radio" name="q2" value="a"> a) 2 февраля 1943 года</label><br>
-                    <label><input type="radio" name="q2" value="b"> b) 9 мая 1945 года</label><br>
-                    <label><input type="radio" name="q2" value="c"> c) 5 декабря 1941 года</label><br>
-                    <label><input type="radio" name="q2" value="d"> d) 12 мая 1944 года</label>
-                </li>
-                <li>
-                    <p>Какой день отмечается 9 мая?</p>
-                    <label><input type="radio" name="q3" value="a"> a) День Победы</label><br>
-                    <label><input type="radio" name="q3" value="b"> b) День начала контрнаступления под Москвой</label><br>
-                    <label><input type="radio" name="q3" value="c"> c) День освобождения Ленинграда</label><br>
-                    <label><input type="radio" name="q3" value="d"> d) День окончания Сталинградской битвы</label>
-                </li>
-                <li>
-                    <p>Когда завершилась Крымская наступательная операция?</p>
-                    <label><input type="radio" name="q4" value="a"> a) 12 мая 1944 года</label><br>
-                    <label><input type="radio" name="q4" value="b"> b) 5 декабря 1941 года</label><br>
-                    <label><input type="radio" name="q4" value="c"> c) 9 октября 1943 года</label><br>
-                    <label><input type="radio" name="q4" value="d"> d) 23 августа 1943 года</label>
-                </li>
-                <li>
-                    <p>Когда завершилась Курская битва?</p>
-                    <label><input type="radio" name="q5" value="a"> a) 23 августа 1943 года</label><br>
-                    <label><input type="radio" name="q5" value="b"> b) 3 сентября 1945 года</label><br>
-                    <label><input type="radio" name="q5" value="c"> c) 9 мая 1945 года</label><br>
-                    <label><input type="radio" name="q5" value="d"> d) 2 февраля 1943 года</label>
-                </li>
-                <li>
-                    <p>Когда была подписана капитуляция Японии?</p>
-                    <label><input type="radio" name="q6" value="a"> a) 3 сентября 1945 года</label><br>
-                    <label><input type="radio" name="q6" value="b"> b) 5 декабря 1941 года</label><br>
-                    <label><input type="radio" name="q6" value="c"> c) 23 августа 1943 года</label><br>
-                    <label><input type="radio" name="q6" value="d"> d) 9 октября 1943 года</label>
-                </li>
-                <li>
-                    <p>Когда завершилась битва за Кавказ?</p>
-                    <label><input type="radio" name="q7" value="a"> a) 9 октября 1943 года</label><br>
-                    <label><input type="radio" name="q7" value="b"> b) 12 мая 1944 года</label><br>
-                    <label><input type="radio" name="q7" value="c"> c) 2 февраля 1943 года</label><br>
-                    <label><input type="radio" name="q7" value="d"> d) 9 мая 1945 года</label>
-                </li>
-                <li>
-                    <p>Какое событие произошло 7 ноября 1941 года?</p>
-                    <label><input type="radio" name="q8" value="a"> a) Военный парад на Красной площади</label><br>
-                    <label><input type="radio" name="q8" value="b"> b) Окончание Второй мировой войны</label><br>
-                    <label><input type="radio" name="q8" value="c"> c) Начало контрнаступления под Москвой</label><br>
-                    <label><input type="radio" name="q8" value="d"> d) Разгром немецких войск в Курской битве</label>
-                </li>
-                </ol>
-                <button type="submit" onclick="alert('Спасибо за прохождение теста')">Отправить</button>
-            </form>
     </div>
     </div>  
 </body>
