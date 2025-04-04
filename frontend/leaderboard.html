@@ -4,17 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Дни воинской славы</title>
+    <title>Результаты теста</title>
 </head>
-
 <body>
     <header class="header-nav">
         <nav class="navigation">
             <ul class="nav-list">
                 <li><a href="index.html" class="nav-link">В начало</a></li>
                 <li><a href="index.html#map" class="nav-link">Карта</a></li>
-                <li><a href="testinvite.html" class="nav-link">Пройти тест</a></li>
+                <li><a href="test.html" class="nav-link">Пройти тест</a></li>
                 <li><a href="leaderboard.html" class="nav-link">Лидерборд</a></li>
             </ul>
         </nav>
     </header>
+
+    <div class="results-container">
+        <h2>Результаты теста</h2>
+        <div id="time-result" class="time-result">
+            <!-- Сюда будет вставлено время -->
+        </div>
+        <a href="index.html" class="glass-button">Вернуться на главную</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const timeResult = document.getElementById('time-result');
+            const timeUsed = parseInt(localStorage.getItem('testTime')) || 0;
+            
+            // Форматируем время
+            const minutes = Math.floor(timeUsed / 60);
+            const seconds = timeUsed % 60;
+            const timeString = `${minutes} мин ${seconds} сек`;
+            
+            // Показываем результаты
+            timeResult.innerHTML = `
+                <p>Вы прошли тест за ${timeString}</p>
+            `;
+        });
+    </script>
+</body>
+</html>

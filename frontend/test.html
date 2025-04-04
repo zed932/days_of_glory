@@ -13,6 +13,7 @@
                 <li><a href="index.html" class="nav-link">В начало</a></li>
                 <li><a href="index.html#map" class="nav-link">Карта</a></li>
                 <li><a href="#test" class="nav-link">Пройти тест</a></li>
+                <li><a href="leaderboard.html" class="nav-link">Результаты</a></li>
             </ul>
         </nav>
     </header>
@@ -24,7 +25,7 @@
         </div>
         
         <div class="test-content">
-                <h2 class="test-header">Пройдите тест</h2>
+            <h2 class="test-header">Пройдите тест</h2>
                 <form id="quiz-form" action="/backend/submit.php" method="post">
                     <label for="fio">Введите ФИО:</label>
                     <input type="text" id="fio" name="fio" required><br>
@@ -91,10 +92,11 @@
                             </li>
                             </ol>
                         </form>
-            <button type="submit" id="submit-test" class="glass-button">Завершить тест</button>
+                <div class="form-actions">
+                    <button type="button" id="submit-test" class="glass-button">Завершить тест</button>
+                </div>
         </div>
     </div>
-
-    <script src="test.js"></script>
-</body>
-</html>
+    <script src="/backend/script.js"></script>
+    </body>
+    </html>
