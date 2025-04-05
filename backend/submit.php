@@ -29,6 +29,7 @@ $correct_answers = [
 $fio = $_POST['fio'] ?? '';
 $group = $_POST['group'] ?? '';
 $score = 0;
+$timeUsed = $_POST['timeUsed'] ?? 0;
 
 // Подсчет правильных ответов
 foreach ($correct_answers as $question => $correct_answer) {
@@ -38,15 +39,9 @@ foreach ($correct_answers as $question => $correct_answer) {
 }
 
 // Запись в базу данных
-$sql = "INSERT INTO results (fio, student_group, score) VALUES (?, ?, ?)";
+$sql = "INSERT INTO results (fio, student_group, score, timeUsed) VALUES (?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssi", $fio, $group, $score);
-
-if ($stmt->execute()) {
-    echo "Спасибо за прохождение теста! Ваш результат: " . $score;
-} else {
-    echo "Ошибка: " . $stmt->error;
-}
+$stmt->bind_param("ssii", $fio, $group, $score, $timeUsed);
 
 // Закрываем соединение
 $stmt->close();
