@@ -24,27 +24,6 @@
         </div>
         <a href="index.html" class="glass-button">Вернуться на главную</a>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const timeResult = document.getElementById('time-result');
-            const timeUsed = parseInt(localStorage.getItem('testTime')) || 0;
-            
-            // Форматируем время
-            const minutes = Math.floor(timeUsed / 60);
-            const seconds = timeUsed % 60;
-            const timeString = `${minutes} мин ${seconds} сек`;
-            
-            // Показываем результаты
-            if (timeUsed == 0) {
-                timeResult.innerHTML = 'Вы еще не прошли тест';
-            }
-            else {
-            timeResult.innerHTML = `
-                <p>Вы прошли тест за ${timeString}</p>
-            `;
-            }
-        });
-    </script>
+    <script src="/backend/scriptLB.js"></script>
 </body>
 </html>
