@@ -37,9 +37,24 @@ document.addEventListener('DOMContentLoaded', function() {
         // Сохраняем оставшееся время
         const timeUsed = 300 - timeLeft;
         localStorage.setItem('testTime', timeUsed);
-        
-        // Перенаправляем на страницу результатов
-        window.location.href = 'leaderboard.html';
+        document.getElementById('time-used').value = timeUsed;
+
+        //фетч для отправки данныж формы
+        const formData = new FormData(quizForm);
+        fetch('/backend/submit.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log('Ответ сервера...', data);
+            // Перенаправляем на страницу результатов
+            window.location.href = 'leaderboard.html';
+        })
+        //обработка ошибки если необходимо
+        .catch(error => {
+            console.error('Ошибка при отправке формы:', error);
+        });
     }
 
     // Обработчик кнопки завершения теста
