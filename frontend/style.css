@@ -183,8 +183,8 @@ body {
 
 .marker {
     position: absolute;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     background: #E9AA2A;
     border-radius: 50%;
     transform: translate(-50%, -50%);
@@ -205,6 +205,7 @@ body {
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
     transition: all 0.3s ease;
+    z-index: 1000;
 }
 
 .marker:hover {
