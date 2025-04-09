@@ -93,8 +93,21 @@ body {
     font-size: 140%;
     margin-left: 10%;
     margin-right: 20%;
-    background-color: black;
     font-style:light;
+}
+
+.description-background {
+    background-image: url("images/main_desc_back.png");
+    background-size: cover;
+}
+
+.main-description {
+    display: inline-block;
+    padding: 17px 20px; /* Отступы вокруг текста */
+    backdrop-filter: blur(8px); /* Размытие фона */
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 8px; /* Закругленные углы для лучшего эффекта стекла */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
 }
 
 .test-section {
