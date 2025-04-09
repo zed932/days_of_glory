@@ -39,6 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('testTime', timeUsed);
         document.getElementById('time-used').value = timeUsed;
 
+        //сохранение фио
+        const fioInput = document.getElementById('fio');
+        const fioValue = fioInput.value.trim();
+        localStorage.setItem('currentUserFio', fioValue);
+
         //фетч для отправки данныж формы
         const formData = new FormData(quizForm);
         fetch('/backend/submit.php', {

@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 }
 
 //последние 10 результатов
-$sql = "SELECT fio, student_group, score, timeUsed FROM results ORDER BY score DESC, timeUsed ASC LIMIT 10";
+$sql = "SELECT fio, student_group, score, timeUsed FROM results ORDER BY score DESC, timeUsed ASC LIMIT 20";
 $result = $conn->query($sql);
 
 $results = [];
