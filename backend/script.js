@@ -27,40 +27,41 @@ document.addEventListener('DOMContentLoaded', function() {
             timeLeft--;
         }
     }
-
-    // Завершение теста
+    //Завершение теста
     function completeTest(timeExpired = false) {
-        if (testCompleted) return;
-        testCompleted = true;
-        clearInterval(timerId);
-        
-        // Сохраняем оставшееся время
-        const timeUsed = 300 - timeLeft;
-        localStorage.setItem('testTime', timeUsed);
-        document.getElementById('time-used').value = timeUsed;
-
-        //сохранение фио
-        const fioInput = document.getElementById('fio');
-        const fioValue = fioInput.value.trim();
-        localStorage.setItem('currentUserFio', fioValue);
-
-        //фетч для отправки данныж формы
-        const formData = new FormData(quizForm);
-        fetch('/backend/submit.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            console.log('Ответ сервера...', data);
-            // Перенаправляем на страницу результатов
-            window.location.href = 'leaderboard.html';
-        })
-        //обработка ошибки если необходимо
-        .catch(error => {
-            console.error('Ошибка при отправке формы:', error);
-        });
-    }
+    if (testCompleted) return;
+    testCompleted = true;
+    clearInterval(timerId);
+    
+    // Сохраняем оставшееся время
+    const timeUsed = 300 - timeLeft;
+    localStorage.setItem('testTime', timeUsed);
+    document.getElementById('time-used').value = timeUsed;
+    
+    //сохранение фио
+    const fioInput = document.getElementById('fio');
+    const fioValue = fioInput.value.trim();
+    localStorage.setItem('currentUserFio', fioValue);
+    
+    // Используем fetch для отправки данных формы
+    const formData = new FormData(quizForm);
+    
+    fetch('/backend/submit.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log('Ответ сервера:', data);
+        // Перенаправляем на страницу результатов
+        window.location.href = 'leaderboard.html';
+    })
+    .catch(error => {
+        console.error('Ошибка при отправке формы:', error);
+        // Обработка ошибки, если необходимо
+    });
+}
+    
 
     // Обработчик кнопки завершения теста
     submitButton.addEventListener('click', function() {
